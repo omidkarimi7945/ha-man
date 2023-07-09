@@ -62,12 +62,12 @@ chmod +x /etc/VPSManager/userteste/$nome.sh
 at -f /etc/VPSManager/userteste/$nome.sh now + $u_temp min > /dev/null 2>&1
 clear
     echo -e "\033[1;32m===================================="
-    echo -e "\033[1;32m   🐉ㅤDRAGON VPS MANAGERㅤ🐉  " 
+    echo -e "\033[1;32m   🐉ㅤhamanㅤ🐉  " 
     echo -e "\033[1;32m===================================="
     echo ""
     echo -e "\033[1;31m◈─────⪧ IMPORTANT ⪦──────◈"
     echo ""
-    echo -e "\033[1;32m◈⪧ 🚫 NO SPAM"
+    echo -e "\033[1;32m◈⪧ 🚫 omid"
     echo -e "\033[1;32m◈⪧ ⚠️ NO DDOS"
     echo -e "\033[1;32m◈⪧ 🎭 NO Hacking"
     echo -e "\033[1;32m◈⪧ ⛔️ NO Carding"

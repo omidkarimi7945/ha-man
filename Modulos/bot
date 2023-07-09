@@ -96,7 +96,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @hamanboot)"
         return 0
     elif [[ -d /etc/bot/suspensos/$id_name ]]; then
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -130,7 +130,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @hamanboot)"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
@@ -156,7 +156,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER"
+            --text "✅ All Tutorials , Updates : @hamanboot"
         return 0
     else
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -1264,7 +1264,7 @@ msg_bem_vindo() {
     msg="👋 Hello ${message_from_first_name[$id]} ! \n\n🤝 Welcome to\n"
     msg+="<b>====================================</b>\n<b>               haman   </b>\n<b>====================================</b>\n\n"
     msg+="<b>To access the menu</b>\n<b>click [ /menu ]</b>\n\n"
-    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @DRAGON_VPS_MANAGER"
+    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @hamanboot"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html

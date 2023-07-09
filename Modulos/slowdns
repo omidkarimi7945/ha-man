@@ -12,7 +12,7 @@ banner='
 |___/____\___/ \_/\_/ |___/|_|\_|___/'
 
 echo -e "${CORTITLE}◇───────────────────────────────────────────────◇${SCOLOR}" 
-echo -e "${CORTITLE}🐉ㅤDRAGON VPS MANAGER SLOW DNS CLIENTㅤ🐉${SCOLOR}"
+echo -e "${CORTITLE}🐉ㅤhamanㅤ🐉${SCOLOR}"
 echo -e "${CORTITLE}◇───────────────────────────────────────────────◇${SCOLOR}" 
 echo -e "${RED}$banner${SCOLOR}"
 [[ ! -e dns ]] && {
@@ -23,7 +23,7 @@ echo -e "${RED}$banner${SCOLOR}"
     chmod +x $PREFIX/bin/slowdns
     [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
     echo -e "\n${GREEN}DOWNLOADING THE SCRIPT PLEASE WAIT! ${SCOLOR}"
-    curl -O https://github.com/github.com/januda-ui/DRAGON-VPS-MANAGER/raw/main/Modulos/dns > /dev/null 2>&1
+    curl -O https://github.com/github.com/omidkarimi7945/haman/raw/main/Modulos/dns > /dev/null 2>&1
     echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}SCRIPT DOWNLOADED! THE NEXT TIME\nRUN THE COMMAND ONLY ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU ARE OFFLINE!${SCOLOR}"
     chmod +x dns
 }

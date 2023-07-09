@@ -20,7 +20,7 @@ installslowdns() {
 	    conexao
 	}
     mkdir /etc/VPSManager/dns >/dev/null 2>&1
-    wget -P $DIR https://github.com/januda-ui/DRAGON-VPS-MANAGER/raw/main/Modulos/dns-server >/dev/null 2>&1  
+    wget -P $DIR https://github.com/omidkarimi7945/haman/raw/main/Modulos/dns-server >/dev/null 2>&1  
     chmod 777 $DIR/dns-server >/dev/null 2>&1
     $DIR/dns-server -gen-key -privkey-file $DIR/server.key -pubkey-file $DIR/server.pub >/dev/null 2>&1
     configdns() {

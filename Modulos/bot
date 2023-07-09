@@ -75,7 +75,7 @@ fun_ajuda() {
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>🐉 ساخت یوزر 🐉</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
+        env_msg+="• <u>ساخت یوزر تست </u> = Create ssh test\n\n"
         env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
         env_msg+="• <u>USER INFO</u> = User Information\n\n"
         env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
@@ -115,7 +115,7 @@ fun_ajuda() {
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>🐉 ساخت یوزر 🐉</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
+        env_msg+="• <u>ساخت یوزر تست </u> = Create ssh test\n\n"
         env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
         env_msg+="• <u>USER INFO</u> = User Information\n\n"
         env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
@@ -143,7 +143,7 @@ fun_ajuda() {
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>🐉 ساخت یوزر 🐉</u> = Create ssh user\n\n"
-        env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
+        env_msg+="• <u>ساخت یوزر تست </u> = Create ssh test\n\n"
         env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
         env_msg+="• <u>USER INFO</u> = User information\n\n"
         env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
@@ -907,7 +907,7 @@ fun_add_teste() {
         return 0
     elif [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:" \
+            --text "👤 ساخت یوزر تست  👤\n\nhow many hours should it last EX: 1:" \
             --reply_markup "$(ShellBot.ForceReply)"
     elif [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]]; then
         _limTotal=$(grep -w "${callback_query_from_username}" $ativos | awk '{print $4}')
@@ -919,7 +919,7 @@ fun_add_teste() {
             return 0
         } || {
             ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-                --text "👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:" \
+                --text "👤 ساخت یوزر تست  👤\n\nhow many hours should it last EX: 1:" \
                 --reply_markup "$(ShellBot.ForceReply)"
         }
     else
@@ -1751,7 +1751,7 @@ fun_menurevenda() {
 unset menu1
 menu1=''
 ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text '🐉 ساخت یوزر 🐉' --callback_data '_criaruser'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'CREATE TEST' --callback_data '_criarteste'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'ساخت یوزر تست ' --callback_data '_criarteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVE USER' --callback_data '_deluser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'CHANGE PASSWORD' --callback_data '_altsenha'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'CHANGE LIMIT' --callback_data '_altlimite'
@@ -1793,7 +1793,7 @@ keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'menu1')"
 unset menu2
 menu2=''
 ShellBot.InlineKeyboardButton --button 'menu2' --line 1 --text '🐉 ساخت یوزر 🐉' --callback_data '_criaruser2'
-ShellBot.InlineKeyboardButton --button 'menu2' --line 1 --text 'CREATE TEST' --callback_data '_criarteste2'
+ShellBot.InlineKeyboardButton --button 'menu2' --line 1 --text 'ساخت یوزر تست ' --callback_data '_criarteste2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 2 --text 'REMOVE USER' --callback_data '_deluser2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 2 --text 'ONLINE USERS' --callback_data '_monitor2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 3 --text 'CHANGE LIMIT' --callback_data '_altlimite2'
@@ -1823,7 +1823,7 @@ keyboard2="$(ShellBot.InlineKeyboardMarkup -b 'menu2')"
 unset menu3
 menu3=''
 ShellBot.InlineKeyboardButton --button 'menu3' --line 1 --text '🐉 ساخت یوزر 🐉' --callback_data '_criaruser3'
-ShellBot.InlineKeyboardButton --button 'menu3' --line 1 --text 'CREATE TEST' --callback_data '_criarteste3'
+ShellBot.InlineKeyboardButton --button 'menu3' --line 1 --text 'ساخت یوزر تست ' --callback_data '_criarteste3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 2 --text 'REMOVE USER' --callback_data '_deluser3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 2 --text 'ONLINE USERS' --callback_data '_monitor3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 3 --text 'CHANGE LIMIT' --callback_data '_altlimite3'
@@ -2504,7 +2504,7 @@ while :; do
                     susp_rev $_VAR1
                     break
                     ;;
-                '👤 CREATE TEST 👤\n\nhow many hours should it last EX: 1:')
+                '👤 ساخت یوزر تست  👤\n\nhow many hours should it last EX: 1:')
                     verifica_acesso
                     echo $_erro
                     [[ "$_erro" == '1' ]] && break

@@ -82,7 +82,7 @@ fun_ajuda() {
         env_msg+="• <u>درباره سرور</u> = Server Information\n\n"
         env_msg+="• <u>عوض کردن پسورد</u> = Change ssh password\n\n"
         env_msg+="• <u>تغییر تعداد کاربر</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
+        env_msg+="• <u>تغییر زمان </u> = تغییر زمان  ssh\n\n"
         env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
         env_msg+="• <u>BACKUP</u> = Create ssh Backup and resellers\n\n"
         env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
@@ -121,7 +121,7 @@ fun_ajuda() {
         env_msg+="• <u>یوزرهای آنلاین</u> = Display یوزرهای آنلاین\n\n"
         env_msg+="• <u>عوض کردن پسورد</u> = Change ssh password\n\n"
         env_msg+="• <u>تغییر تعداد کاربر</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
+        env_msg+="• <u>تغییر زمان </u> = تغییر زمان  ssh\n\n"
         env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
         env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
         env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
@@ -149,7 +149,7 @@ fun_ajuda() {
         env_msg+="• <u>یوزرهای آنلاین</u> = Display users online\n\n"
         env_msg+="• <u>عوض کردن پسورد</u> = Change ssh password\n\n"
         env_msg+="• <u>تغییر تعداد کاربر</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh date\n\n"
+        env_msg+="• <u>تغییر زمان </u> = Change ssh date\n\n"
         env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -396,7 +396,7 @@ alterar_data() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "⏳ Change Date ⏳\n\nUsername:" \
+            --text "⏳ تغییر زمان  ⏳\n\nUsername:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1755,7 +1755,7 @@ ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'ساخت یوز�
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVE USER' --callback_data '_deluser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'عوض کردن پسورد' --callback_data '_altsenha'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 5 --text 'تغییر تعداد کاربر' --callback_data '_altlimite'
-ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'CHANGE DATE' --callback_data '_altdata'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 6 --text 'تغییر زمان ' --callback_data '_altdata'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 7 --text 'یوزرهای آنلاین' --callback_data '_monitor'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 8 --text 'INFO USERS' --callback_data '_verusers'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 9 --text 'EXPIRED' --callback_data '_expirados'
@@ -1800,7 +1800,7 @@ ShellBot.InlineKeyboardButton --button 'menu2' --line 3 --text 'تغییر تع�
 ShellBot.InlineKeyboardButton --button 'menu2' --line 3 --text 'USER INFO' --callback_data '_verusers2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 4 --text 'عوض کردن پسورد' --callback_data '_altsenha2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 4 --text 'EXPIRED' --callback_data '_expirados2'
-ShellBot.InlineKeyboardButton --button 'menu2' --line 5 --text 'CHANGE DATE' --callback_data '_altdata2'
+ShellBot.InlineKeyboardButton --button 'menu2' --line 5 --text 'تغییر زمان ' --callback_data '_altdata2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 5 --text 'RESALE' --callback_data '_opcoesrev2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 6 --text 'REPORT' --callback_data '_relatorio2'
 ShellBot.InlineKeyboardButton --button 'menu2' --line 6 --text 'HELP' --callback_data '_ajuda2'
@@ -1830,7 +1830,7 @@ ShellBot.InlineKeyboardButton --button 'menu3' --line 3 --text 'تغییر تع�
 ShellBot.InlineKeyboardButton --button 'menu3' --line 3 --text 'USER INFO' --callback_data '_verusers3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 4 --text 'عوض کردن پسورد' --callback_data '_altsenha3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 4 --text 'EXPIRED' --callback_data '_expirados3'
-ShellBot.InlineKeyboardButton --button 'menu3' --line 5 --text 'CHANGE DATE' --callback_data '_altdata3'
+ShellBot.InlineKeyboardButton --button 'menu3' --line 5 --text 'تغییر زمان ' --callback_data '_altdata3'
 ShellBot.InlineKeyboardButton --button 'menu3' --line 5 --text 'HELP' --callback_data '_ajuda3'
 ShellBot.regHandleFunction --function fun_adduser --callback_data _criaruser3
 ShellBot.regHandleFunction --function fun_add_teste --callback_data _criarteste3
@@ -2127,7 +2127,7 @@ while :; do
                         --parse_mode html
                     rm /tmp/name-l >/dev/null 2>&1
                     ;;
-                '⏳ Change Date ⏳\n\nUsername:')
+                '⏳ تغییر زمان  ⏳\n\nUsername:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     fun_verif_user ${message_text[$id]}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_lvk=$(wget -qO- https://raw.githubusercontent.com/januda-ui/DRAGON-VPS-MANAGER/main/Sistema/versao)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/omidkarimi7945/ha-man/main/Sistema/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
